@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="javascript">
+$(document).ready(function(){
+  $("#button1").click(function(){
+    var x =$("#num1").val();
+    var y =$("#num2").val();
+   var ans = parseInt(x) + parseInt(y);
+  $("#answer").val(ans);
+  });
+
+ $("#button2").click(function(){
+    var x =$("#num1").val();
+    var y =$("#num2").val();
+   var ans = parseInt(x) - parseInt(y);
+  $("#answer").val(ans);
+  });
+
+$("#button3").click(function(){
+    var x =$("#num1").val();
+    var y =$("#num2").val();
+   var ans = parseInt(x) * parseInt(y);
+  $("#answer").val(ans);
+  });
+
+$("#button4").click(function(){
+    var x =$("#num1").val();
+    var y =$("#num2").val();
+    if(y==0){
+     alert("Divide by zero Error!!")
+    }
+else{
+   var ans = parseInt(x) / parseInt(y);
+  $("#answer").val(ans);
+}
+  });
+});
+</script>
+</head>
+<body>
+<br>
+Number 1 &nbsp;<input type="number" id=num1 >
+<br>
+<br>
+Number 2 &nbsp;<input type="number" id=num2 >
+<br>
+<br>
+&nbsp;<button id="button1">+</button> &nbsp;
+&nbsp;<button id="button2">-</button> &nbsp;
+&nbsp;<button id="button3">*</button> &nbsp;
+&nbsp;<button id="button4">/</button>&nbsp;
+<br>
+<br>
+Answer &nbsp;<input type="text" id=answer >
+</body>
+</html>
